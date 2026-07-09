@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="pl" class="bg-void">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ink & Soul — Studio Tatuażu | Realistyczne tatuaże black &amp; grey</title>
+  <meta name="description" content="Autorskie studio tatuażu. Realistyczne projekty black &amp; grey, sleeve'y i portrety. Higiena, doświadczenie i indywidualne podejście do każdego klienta." />
+  <meta name="theme-color" content="#0a0a0b" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            void: '#0a0a0b',
+            carbon: '#101012',
+            obsidian: '#17181a',
+            graphite: '#262629',
+            ash: '#6b6f76',
+            fog: '#9aa0a8',
+            mist: '#d4d8de',
+            paper: '#ffffff',
+            ink: '#e2b04a',
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            display: ['"Bebas Neue"', 'Inter', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="bg-void text-mist antialiased">
+
+  <!-- ============ NAV ============ -->
+  <header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
+    <nav class="max-w-6xl mx-auto flex items-center justify-between px-5 py-4">
+      <a href="#hero" class="flex items-center gap-2">
+        <span class="font-display text-2xl tracking-wide text-paper">INK<span class="text-ink">&amp;</span>SOUL</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8 text-sm text-mist">
+        <a href="#portfolio" class="hover:text-ink transition-colors">Portfolio</a>
+        <a href="#o-mnie" class="hover:text-ink transition-colors">O mnie</a>
+        <a href="#proces" class="hover:text-ink transition-colors">Proces</a>
+        <a href="#cennik" class="hover:text-ink transition-colors">Cennik</a>
+        <a href="#faq" class="hover:text-ink transition-colors">FAQ</a>
+        <a href="#kontakt" class="hover:text-ink transition-colors">Kontakt</a>
+      </div>
+      <a href="#kontakt" class="hidden sm:inline-flex items-center rounded-md bg-ink px-4 py-2 text-sm font-semibold text-void hover:bg-white transition-colors">
+        Umów wizytę
+      </a>
+      <button id="menuBtn" class="md:hidden text-paper" aria-label="Menu">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </nav>
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="hidden md:hidden nav-scrolled px-5 py-4">
+      <div class="flex flex-col gap-4 text-sm">
+        <a href="#portfolio" class="hover:text-ink">Portfolio</a>
+        <a href="#o-mnie" class="hover:text-ink">O mnie</a>
+        <a href="#proces" class="hover:text-ink">Proces</a>
+        <a href="#cennik" class="hover:text-ink">Cennik</a>
+        <a href="#faq" class="hover:text-ink">FAQ</a>
+        <a href="#kontakt" class="hover:text-ink">Kontakt</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ 1. HERO ============ -->
+<section id="hero" class="relative min-h-[90vh] md:min-h-screen flex items-center overflow-hidden bg-void">
+    <div class="absolute inset-0 z-0">
+      <img src="img/HERO.JPG" alt="Tatuażysta wykonujący realistyczny tatuaż na plecach klienta" class="w-full h-full object-cover object-center opacity-40 md:opacity-50" />
+      <div class="absolute inset-0 bg-gradient-to-tr from-void via-void/80 to-transparent"></div>
+    </div>
+
+    <div class="relative z-10 max-w-6xl mx-auto w-full px-5 py-32 md:py-40">
+      <div class="max-w-3xl">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="h-px w-8 bg-ink hidden sm:block"></span>
+          <p class="text-ink text-xs sm:text-sm font-bold tracking-[0.3em] uppercase">
+            Autorskie studio tatuażu
+          </p>
+        </div>
+        
+        <h1 class="font-display text-5xl sm:text-7xl md:text-8xl tracking-tight text-paper uppercase leading-[0.95] text-balance">
+          Sztuka, która <br class="hidden sm:block" />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-paper via-mist to-ash">zostaje z Tobą</span> <br/>
+          <span class="text-ink">na zawsze</span>
+        </h1>
+        
+        <p class="mt-6 max-w-xl text-base sm:text-lg text-fog leading-relaxed text-pretty pl-4 border-l-2 border-graphite">
+          Realistyczne tatuaże black &amp; grey, sleeve'y i portrety. Każdy projekt tworzony indywidualnie — od pierwszego szkicu po ostatnią linię.
+        </p>
+        
+        <div class="mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+          <a href="#kontakt" class="inline-flex items-center justify-center gap-2 rounded-md bg-ink px-8 py-4 font-semibold text-void hover:bg-white hover:scale-[1.02] active:scale-[0.98] transition-all duration-250 shadow-lg shadow-ink/10">
+            Umów konsultację
+          </a>
+          <a href="#portfolio" class="inline-flex items-center justify-center gap-2 rounded-md border border-graphite bg-void/40 backdrop-blur-sm px-8 py-4 text-mist hover:border-ink hover:text-ink hover:bg-void/80 transition-all duration-250">
+            Zobacz portfolio
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 opacity-50 animate-pulse">
+      <span class="text-[10px] tracking-[0.2em] uppercase text-fog">Scroll</span>
+      <div class="w-1 h-8 bg-gradient-to-b from-ink to-transparent rounded-full"></div>
+    </div>
+  </section>
+
+  <!-- ============ 2. PASEK ZAUFANIA ============ -->
+  <section class="border-y border-graphite bg-carbon">
+    <div class="max-w-6xl mx-auto px-5 py-10 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div>
+        <div class="font-display text-5xl text-ink">12+</div>
+        <p class="mt-2 text-sm text-fog uppercase tracking-wider">Lat doświadczenia</p>
+      </div>
+      <div>
+        <div class="font-display text-5xl text-ink">3000+</div>
+        <p class="mt-2 text-sm text-fog uppercase tracking-wider">Wykonanych tatuaży</p>
+      </div>
+      <div>
+        <div class="font-display text-5xl text-ink">100%</div>
+        <p class="mt-2 text-sm text-fog uppercase tracking-wider">Sterylny sprzęt</p>
+      </div>
+      <div>
+        <div class="font-display text-5xl text-ink">4.9★</div>
+        <p class="mt-2 text-sm text-fog uppercase tracking-wider">Ocena klientów</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3. PORTFOLIO ============ -->
+  <section id="portfolio" class="max-w-6xl mx-auto px-5 py-24 reveal">
+    <div class="mb-12">
+      <p class="text-ink text-sm font-semibold tracking-[0.25em] uppercase mb-3">Realizacje</p>
+      <h2 class="font-display text-5xl md:text-6xl text-paper accent-line">Portfolio</h2>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div class="portfolio-item relative overflow-hidden rounded-xl hairline aspect-[3/4] lg:row-span-2 lg:aspect-auto">
+        <img src="img/IMG_3283.PNG" alt="Realistyczny tatuaż lwa z kompasem i różą na przedramieniu" class="w-full h-full object-cover" />
+        <div class="absolute bottom-0 inset-x-0 p-5 bg-gradient-to-t from-void/90 to-transparent">
+          <span class="text-paper font-medium">Lew &amp; kompas</span>
+          <p class="text-fog text-sm">Black &amp; grey · sleeve</p>
+        </div>
+      </div>
+      <div class="portfolio-item relative overflow-hidden rounded-xl hairline aspect-[4/5]">
+        <img src="img/IMG_3280.PNG" alt="Tatuaż zegara i klepsydry w stylu realistycznym" class="w-full h-full object-cover" />
+        <div class="absolute bottom-0 inset-x-0 p-5 bg-gradient-to-t from-void/90 to-transparent">
+          <span class="text-paper font-medium">Zegar &amp; klepsydra</span>
+          <p class="text-fog text-sm">Realizm · przedramię</p>
+        </div>
+      </div>
+      <div class="portfolio-item relative overflow-hidden rounded-xl hairline aspect-[4/5]">
+        <img src="img/IMG_3282.PNG" alt="Portret owczarka niemieckiego z imieniem jako tatuaż" class="w-full h-full object-cover" />
+        <div class="absolute bottom-0 inset-x-0 p-5 bg-gradient-to-t from-void/90 to-transparent">
+          <span class="text-paper font-medium">Portret psa</span>
+          <p class="text-fog text-sm">Realizm · pamiątkowy</p>
+        </div>
+      </div>
+      <div class="portfolio-item relative overflow-hidden rounded-xl hairline aspect-[4/3] sm:col-span-2">
+        <img src="img/IMG_0833.JPG" alt="Tatuażysta przy pracy w studiu" class="w-full h-full object-cover" />
+        <div class="absolute bottom-0 inset-x-0 p-5 bg-gradient-to-t from-void/90 to-transparent">
+          <span class="text-paper font-medium">Studio w akcji</span>
+          <p class="text-fog text-sm">Sesja tatuażu</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4. O MNIE ============ -->
+  <section id="o-mnie" class="bg-carbon border-y border-graphite reveal">
+    <div class="max-w-6xl mx-auto px-5 py-24 grid md:grid-cols-2 gap-14 items-center">
+      <div class="relative rounded-xl overflow-hidden hairline">
+        <img src="img/IMG_2869.JPG" alt="Tatuażysta projektujący wzór na tablecie w studiu" class="w-full h-full object-cover" />
+      </div>
+      <div>
+        <p class="text-ink text-sm font-semibold tracking-[0.25em] uppercase mb-3">O mnie</p>
+        <h2 class="font-display text-5xl md:text-6xl text-paper accent-line">Pasja zamknięta w skórze</h2>
+        <p class="mt-8 text-lg text-fog leading-relaxed text-pretty">
+          Tatuażem zajmuję się od ponad dekady. Specjalizuję się w realizmie black &amp; grey — portretach, zwierzętach oraz dużych, spójnych kompozycjach na całe ramię.
+        </p>
+        <p class="mt-4 text-lg text-fog leading-relaxed text-pretty">
+          Każdy projekt zaczynam od rozmowy i indywidualnego szkicu. Nie kopiuję — tworzę wzory dopasowane do Twojego ciała i historii, którą chcesz opowiedzieć.
+        </p>
+        <ul class="mt-8 grid sm:grid-cols-2 gap-4 text-mist">
+          <li class="flex items-center gap-3"><span class="text-ink">◆</span> Autorskie projekty</li>
+          <li class="flex items-center gap-3"><span class="text-ink">◆</span> Realizm &amp; black &amp; grey</li>
+          <li class="flex items-center gap-3"><span class="text-ink">◆</span> Cover-upy i poprawki</li>
+          <li class="flex items-center gap-3"><span class="text-ink">◆</span> Duże sleeve'y</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 5. OPINIE ============ -->
+  <section class="max-w-6xl mx-auto px-5 py-24 reveal">
+    <div class="mb-12 text-center">
+      <p class="text-ink text-sm font-semibold tracking-[0.25em] uppercase mb-3">Opinie</p>
+      <h2 class="font-display text-5xl md:text-6xl text-paper accent-line center">Co mówią klienci</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-5">
+      <figure class="rounded-xl hairline bg-carbon p-7">
+        <div class="text-ink mb-4">★★★★★</div>
+        <blockquote class="text-mist leading-relaxed">„Portret mojego psa wyszedł idealnie — dokładnie tak, jak sobie wymarzyłem. Profesjonalizm na najwyższym poziomie."</blockquote>
+        <figcaption class="mt-5 text-sm text-fog">— Aleksandra K.</figcaption>
+      </figure>
+      <figure class="rounded-xl hairline bg-carbon p-7">
+        <div class="text-ink mb-4">★★★★★</div>
+        <blockquote class="text-mist leading-relaxed">„Sleeve robiony przez kilka sesji, ale warto było. Precyzja, cierpliwość i świetny kontakt. Polecam każdemu."</blockquote>
+        <figcaption class="mt-5 text-sm text-fog">— Marcin W.</figcaption>
+      </figure>
+      <figure class="rounded-xl hairline bg-carbon p-7">
+        <div class="text-ink mb-4">★★★★★</div>
+        <blockquote class="text-mist leading-relaxed">„Czysto, bezpiecznie i z klasą. Konsultacja rozwiała wszystkie wątpliwości. Efekt przerósł oczekiwania."</blockquote>
+        <figcaption class="mt-5 text-sm text-fog">— Kasia M.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ 6. PROCES WIZYTY ============ -->
+  <section id="proces" class="bg-carbon border-y border-graphite reveal">
+    <div class="max-w-6xl mx-auto px-5 py-24">
+      <div class="mb-14">
+        <p class="text-ink text-sm font-semibold tracking-[0.25em] uppercase mb-3">Jak to działa</p>
+        <h2 class="font-display text-5xl md:text-6xl text-paper accent-line">Proces wizyty</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div class="rounded-xl hairline bg-obsidian p-7">
+          <div class="font-display text-5xl text-ink mb-4">01</div>
+          <h3 class="text-paper font-semibold text-lg mb-2">Konsultacja</h3>
+          <p class="text-fog text-sm leading-relaxed">Rozmawiamy o pomyśle, miejscu i rozmiarze. Ustalamy budżet i styl.</p>
+        </div>
+        <div class="rounded-xl hairline bg-obsidian p-7">
+          <div class="font-display text-5xl text-ink mb-4">02</div>
+          <h3 class="text-paper font-semibold text-lg mb-2">Projekt</h3>
+          <p class="text-fog text-sm leading-relaxed">Tworzę autorski szkic dopasowany do anatomii i Twoich oczekiwań.</p>
+        </div>
+        <div class="rounded-xl hairline bg-obsidian p-7">
+          <div class="font-display text-5xl text-ink mb-4">03</div>
+          <h3 class="text-paper font-semibold text-lg mb-2">Sesja</h3>
+          <p class="text-fog text-sm leading-relaxed">W komfortowych warunkach i pełnej sterylności wykonuję tatuaż.</p>
+        </div>
+        <div class="rounded-xl hairline bg-obsidian p-7">
+          <div class="font-display text-5xl text-ink mb-4">04</div>
+          <h3 class="text-paper font-semibold text-lg mb-2">Gojenie</h3>
+          <p class="text-fog text-sm leading-relaxed">Otrzymujesz instrukcje pielęgnacji i wsparcie aż do pełnego zagojenia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 7. CENNIK ============ -->
+  <section id="cennik" class="max-w-6xl mx-auto px-5 py-24 reveal">
+    <div class="mb-14">
+      <p class="text-ink text-sm font-semibold tracking-[0.25em] uppercase mb-3">Cennik</p>
+      <h2 class="font-display text-5xl md:text-6xl text-paper accent-line">Orientacyjne ceny</h2>
+      <p class="mt-6 text-fog max-w-xl">Ostateczna wycena zawsze ustalana jest podczas konsultacji, na podstawie wielkości, detali i miejsca tatuażu.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-5">
+      <div class="rounded-xl hairline bg-carbon p-8">
+        <h3 class="text-paper font-semibold text-xl mb-1">Małe wzory</h3>
+        <p class="text-fog text-sm mb-6">Napisy, symbole, drobne motywy</p>
+        <div class="font-display text-5xl text-ink mb-6">od 300 zł</div>
+        <ul class="space-y-3 text-sm text-mist">
+          <li class="flex gap-3"><span class="text-ink">✓</span> Projekt w cenie</li>
+          <li class="flex gap-3"><span class="text-ink">✓</span> Do ok. 1 godziny</li>
+          <li class="flex gap-3"><span class="text-ink">✓</span> Sterylny, jednorazowy sprzęt</li>
+        </ul>
+      </div>
+      <div class="rounded-xl bg-carbon p-8 relative" style="border:1px solid var(--ink)">
+        <span class="absolute top-5 right-5 text-xs font-semibold uppercase tracking-wider bg-ink text-void px-3 py-1 rounded-full">Popularne</span>
+        <h3 class="text-paper font-semibold text-xl mb-1">Średnie projekty</h3>
+        <p class="text-fog text-sm mb-6">Realizm, portrety, kompozycje</p>
+        <div class="font-display text-5xl text-ink mb-6">od 800 zł</div>
+        <ul class="space-y-3 text-sm text-mist">
+          <li class="flex gap-3"><span class="text-ink">✓</span> Autorski szkic</li>
+          <li class="flex gap-3"><span class="text-ink">✓</span> 2–4 godziny pracy</li>
+          <li class="flex gap-3"><span class="text-ink">✓</span> Konsultacja gratis</li>
+        </ul>
+      </div>
+      <div class="rounded-xl hairline bg-carbon p-8">
+        <h3 class="text-paper font-semibold text-xl mb-1">Duże / sleeve</h3>
+        <p class="text-fog text-sm mb-6">Rękawy i rozległe kompozycje</p>
+        <div class="font-display text-5xl text-ink mb-6">wycena indyw.</div>
+        <ul class="space-y-3 text-sm text-mist">
+          <li class="flex gap-3"><span class="text-ink">✓</span> Rozłożenie na sesje</li>
+          <li class="flex gap-3"><span class="text-ink">✓</span> Stawka za dzień pracy</li>
+          <li class="flex gap-3"><span class="text-ink">✓</span> Pełen plan projektu</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 8. HIGIENA I BEZPIECZEŃSTWO ============ -->
+  <section id="higiena" class="bg-carbon border-y border-graphite reveal">
+    <div class="max-w-6xl mx-auto px-5 py-24 grid md:grid-cols-2 gap-14 items-center">
+      <div>
+        <p class="text-ink text-sm font-semibold tracking-[0.25em] uppercase mb-3">Twoje bezpieczeństwo</p>
+        <h2 class="font-display text-5xl md:text-6xl text-paper accent-line">Higiena i bezpieczeństwo</h2>
+        <p class="mt-8 text-lg text-fog leading-relaxed text-pretty">
+          Zdrowie klienta jest priorytetem. Pracuję zgodnie z najwyższymi standardami sanitarnymi, z pełną dokumentacją i certyfikowanymi materiałami.
+        </p>
+        <div class="mt-8 grid sm:grid-cols-2 gap-5">
+          <div class="rounded-lg hairline bg-obsidian p-5">
+            <h3 class="text-paper font-semibold mb-1">Jednorazowy sprzęt</h3>
+            <p class="text-fog text-sm">Igły i tuby otwierane przy Tobie.</p>
+          </div>
+          <div class="rounded-lg hairline bg-obsidian p-5">
+            <h3 class="text-paper font-semibold mb-1">Sterylizacja</h3>
+            <p class="text-fog text-sm">Autoklaw i regularna dezynfekcja.</p>
+          </div>
+          <div class="rounded-lg hairline bg-obsidian p-5">
+            <h3 class="text-paper font-semibold mb-1">Certyfikowane tusze</h3>
+            <p class="text-fog text-sm">Zgodne z normami UE, wegańskie.</p>
+          </div>
+          <div class="rounded-lg hairline bg-obsidian p-5">
+            <h3 class="text-paper font-semibold mb-1">Karta klienta</h3>
+            <p class="text-fog text-sm">Wywiad zdrowotny przed sesją.</p>
+          </div>
+        </div>
+      </div>
+      <div class="relative rounded-xl overflow-hidden hairline">
+        <img src="img/IMG_0835.JPG" alt="Tatuażysta w rękawiczkach pracujący sterylnym sprzętem" class="w-full h-full object-cover" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 9. FAQ ============ -->
+  <section id="faq" class="max-w-3xl mx-auto px-5 py-24 reveal">
+    <div class="mb-12 text-center">
+      <p class="text-ink text-sm font-semibold tracking-[0.25em] uppercase mb-3">Pytania</p>
+      <h2 class="font-display text-5xl md:text-6xl text-paper accent-line center">Najczęstsze pytania</h2>
+    </div>
+    <div class="space-y-3">
+      <div class="faq-item rounded-xl hairline bg-carbon">
+        <button class="faq-trigger w-full flex items-center justify-between text-left px-6 py-5">
+          <span class="text-paper font-medium">Czy tatuaż boli?</span>
+          <span class="faq-icon text-ink text-2xl leading-none">+</span>
+        </button>
+        <div class="faq-answer px-6"><p class="pb-5 text-fog leading-relaxed">Odczucia są indywidualne i zależą od miejsca. Większość klientów opisuje to jako dyskomfort, a nie silny ból. Zadbam o Twój komfort podczas całej sesji.</p></div>
+      </div>
+      <div class="faq-item rounded-xl hairline bg-carbon">
+        <button class="faq-trigger w-full flex items-center justify-between text-left px-6 py-5">
+          <span class="text-paper font-medium">Jak przygotować się do wizyty?</span>
+          <span class="faq-icon text-ink text-2xl leading-none">+</span>
+        </button>
+        <div class="faq-answer px-6"><p class="pb-5 text-fog leading-relaxed">Wyśpij się, zjedz posiłek, nawodnij organizm i unikaj alkoholu dzień wcześniej. Ubierz się wygodnie, tak aby łatwo odsłonić tatuowane miejsce.</p></div>
+      </div>
+      <div class="faq-item rounded-xl hairline bg-carbon">
+        <button class="faq-trigger w-full flex items-center justify-between text-left px-6 py-5">
+          <span class="text-paper font-medium">Czy trzeba wpłacić zadatek?</span>
+          <span class="faq-icon text-ink text-2xl leading-none">+</span>
+        </button>
+        <div class="faq-answer px-6"><p class="pb-5 text-fog leading-relaxed">Tak, rezerwacja terminu wymaga zadatku, który jest odliczany od finalnej ceny tatuażu. Pokrywa on czas poświęcony na przygotowanie projektu.</p></div>
+      </div>
+      <div class="faq-item rounded-xl hairline bg-carbon">
+        <button class="faq-trigger w-full flex items-center justify-between text-left px-6 py-5">
+          <span class="text-paper font-medium">Od jakiego wieku wykonujecie tatuaże?</span>
+          <span class="faq-icon text-ink text-2xl leading-none">+</span>
+        </button>
+        <div class="faq-answer px-6"><p class="pb-5 text-fog leading-relaxed">Tatuaże wykonuję wyłącznie osobom pełnoletnim (18+). Wymagany jest ważny dokument tożsamości ze zdjęciem.</p></div>
+      </div>
+      <div class="faq-item rounded-xl hairline bg-carbon">
+        <button class="faq-trigger w-full flex items-center justify-between text-left px-6 py-5">
+          <span class="text-paper font-medium">Jak dbać o tatuaż po sesji?</span>
+          <span class="faq-icon text-ink text-2xl leading-none">+</span>
+        </button>
+        <div class="faq-answer px-6"><p class="pb-5 text-fog leading-relaxed">Po sesji otrzymasz szczegółową instrukcję pielęgnacji. Kluczowe jest utrzymanie czystości, delikatne nawilżanie i unikanie słońca oraz kąpieli przez okres gojenia.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 10. LOKALIZACJA I CTA ============ -->
+  <section id="kontakt" class="relative border-t border-graphite">
+    <div class="max-w-6xl mx-auto px-5 py-24 grid md:grid-cols-2 gap-14">
+      <div>
+        <p class="text-ink text-sm font-semibold tracking-[0.25em] uppercase mb-3">Kontakt</p>
+        <h2 class="font-display text-5xl md:text-6xl text-paper accent-line">Umów wizytę</h2>
+        <p class="mt-8 text-lg text-fog leading-relaxed text-pretty">
+          Masz pomysł na tatuaż? Napisz lub zadzwoń — wspólnie zaplanujemy Twój projekt. Odpowiadam także na Instagramie.
+        </p>
+        <div class="mt-8 space-y-5 text-mist">
+          <div class="flex items-center gap-4">
+            <span class="text-ink">✆</span>
+            <a href="tel:+48500600700" class="hover:text-ink transition-colors">+48 500 600 700</a>
+          </div>
+          <div class="flex items-center gap-4">
+            <span class="text-ink">✉</span>
+            <a href="mailto:kontakt@inkandsoul.pl" class="hover:text-ink transition-colors">kontakt@inkandsoul.pl</a>
+          </div>
+          <div class="flex items-center gap-4">
+            <span class="text-ink">◎</span>
+            <span>ul. Artystyczna 12, 00-001 Warszawa</span>
+          </div>
+          <div class="flex items-center gap-4">
+            <span class="text-ink">◷</span>
+            <span>Pon–Sob: 11:00 – 20:00</span>
+          </div>
+        </div>
+        <a href="tel:+48500600700" class="mt-9 inline-flex items-center gap-2 rounded-md bg-ink px-6 py-3 font-semibold text-void hover:bg-white transition-colors">
+          Zadzwoń teraz
+        </a>
+      </div>
+
+      <div class="rounded-xl overflow-hidden hairline min-h-[340px]">
+        <iframe
+          title="Lokalizacja studia tatuażu"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=20.9779%2C52.2247%2C21.0479%2C52.2547&amp;layer=mapnik"
+          class="w-full h-full min-h-[340px] border-0 grayscale"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="border-t border-graphite bg-carbon">
+    <div class="max-w-6xl mx-auto px-5 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
+      <span class="font-display text-2xl text-paper">INK<span class="text-ink">&amp;</span>SOUL</span>
+      <p class="text-sm text-ash">© 2026 Ink &amp; Soul Studio Tatuażu. Wszelkie prawa zastrzeżone.</p>
+      <div class="flex gap-5 text-sm text-fog">
+        <a href="#" class="hover:text-ink transition-colors">Instagram</a>
+        <a href="#" class="hover:text-ink transition-colors">Facebook</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ SCRIPTS ============ -->
+  <script>
+    // Nav background on scroll
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('nav-scrolled', window.scrollY > 40);
+    });
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-trigger').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+
+    // Reveal on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
